@@ -1,7 +1,7 @@
 {
   "name": "tweeter",
   "version": "1.0.0",
-  "description": "only the server folder was given. Public folder is work of this dev.",
+  "description": "only the server folder was given. Public folder is work of this dev. The design specifications were given.",
   "main": "index.js",
   "scripts": {
     "server": "nodemon server/index.js"
