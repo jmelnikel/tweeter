@@ -12,3 +12,9 @@ body {
   font-weight: 300;
   color: #545149;
 }
+
+.container {
+  height: 200px;
+  width: 90%;
+  margin: 0 auto;
+}
