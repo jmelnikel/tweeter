@@ -1,0 +1,23 @@
+form textarea {
+  width: 100%;
+  background-color: #f4f1ec;
+  resize: none;
+  border: none;
+  border-bottom: 3px solid #545149;
+  outline: none;
+  font-weight: 700;
+  color: #545149;
+}
+
+form footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.5em;
+  font-family: bungee, sans-serif;
+  color: #545149;
+}
+
+form button {
+  background-color: #4056A1;
+  color: white;
+}

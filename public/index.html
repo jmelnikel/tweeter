@@ -15,6 +15,7 @@
   <link rel="stylesheet" type="text/css" href="/styles/layout.css">
   <link rel="stylesheet" type="text/css" href="/styles/nav.css">
   <link rel="stylesheet" type="text/css" href="/styles/header.css">
+  <link rel="stylesheet" type="text/css" href="/styles/new-tweet.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script type="text/javascript" src="/scripts/client.js"></script>
@@ -31,7 +32,17 @@
     <h2>Amy <Span>Mansell</Span></h2>
   </header>
   <main class="container">
-
+    <section class="new-tweet">
+      <h2>Compose Tweet</h2>
+      <form action="/tweets" method="POST">
+        <label for="tweet-text"></label>
+        <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
+        <footer>
+          <button type="submit">Tweet</button>
+          <output name="counter" class="counter" for="tweet-text">140</output>
+        </footer>
+      </form>
+    </section>
   </main>
 </body>
 
