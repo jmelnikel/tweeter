@@ -1,0 +1,23 @@
+.tweet {
+  border: solid 2px black
+}
+
+.tweet:hover {
+  box-shadow: 3px 3px 0 3px black;
+}
+
+.tweet header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tweet main {
+  font-size: 1.5em;
+  border-bottom: solid 2px black;
+}
+
+.tweet footer {
+  display: flex;
+  justify-content: space-between;
+}
+

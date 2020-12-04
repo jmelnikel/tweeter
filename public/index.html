@@ -16,9 +16,11 @@
   <link rel="stylesheet" type="text/css" href="/styles/nav.css">
   <link rel="stylesheet" type="text/css" href="/styles/header.css">
   <link rel="stylesheet" type="text/css" href="/styles/new-tweet.css">
+  <link rel="stylesheet" type="text/css" href="/styles/tweet.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script type="text/javascript" src="/scripts/client.js"></script>
+  <script type="text/javascript" src="/scripts/char-counter.js"></script>
 
   <title>Tweeter - Home Page</title>
 </head>
@@ -27,7 +29,7 @@
   <nav>
     <span>tweeter</span>
   </nav>
-  <header>
+  <header class="avatar">
     <img src="/images/profile-hex.png">
     <h2>Amy <Span>Mansell</Span></h2>
   </header>
@@ -39,9 +41,27 @@
         <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
         <footer>
           <button type="submit">Tweet</button>
-          <output name="counter" class="counter" for="tweet-text">140</output>
+          <output name="counter" class="counter" for="tweet-text"></output>
         </footer>
       </form>
+    </section>
+    <section>
+      <article class="tweet">
+        <header>
+          <div>
+            <span>picture</span>
+            <span>Name</span>
+          </div>
+          <span>Handle</span>
+        </header>
+        <main>
+          <p>This is content</p>
+        </main>
+        <footer>
+          <span>Time</span>
+          <span>Icon buttons</span>
+        </footer>
+      </article>
     </section>
   </main>
 </body>

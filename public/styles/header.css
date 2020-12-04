@@ -1,4 +1,4 @@
-header {
+.avatar {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,6 +9,6 @@ header {
   background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
 }
 
-header span {
+.avatar span {
   font-weight: 300;
 }
