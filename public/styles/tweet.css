@@ -1,5 +1,7 @@
 .tweet {
-  border: solid 2px black
+  margin-bottom: 25px;
+  border: solid 2px black;
+  padding: 15px;
 }
 
 .tweet:hover {
@@ -9,6 +11,16 @@
 .tweet header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+.tweet header img {
+  margin-right: 10px;
+}
+
+.tweet header div {
+  display: flex;
+  align-items: center;
 }
 
 .tweet main {

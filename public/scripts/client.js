@@ -44,11 +44,11 @@ const createTweetElement = tweetObject => {
 
 const renderTweets = (tweetsArray, $container) => {
   for (let tweet of tweetsArray) {
-    $($container).append(createTweetElement(tweet))
+    $($container).prepend(createTweetElement(tweet))
   }
 }
 
 $(document).ready(() => {
-  const $container = $(".container")
+  const $container = $(".tweets-list")
   renderTweets(tweetsArray, $container) // Dependency Injection
 });
