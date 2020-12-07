@@ -24,34 +24,31 @@ const tweetsArray = [
 ];
 
 const createTweetElement = tweetObject => {
-  return `
-  <article class="tweet">
-    <header>
-      <div>
-        <img class="" src="${tweetObject.user.avatars}" alt="">
-        <span>${tweetObject.user.name}</span>
-      </div>
-      <span>${tweetObject.user.handle}</span>
-    </header>
-    <main>
-      <p>${tweetObject.content.text}</p>
-    </main>
-    <footer>
-      <span>${tweetObject.created_at}</span>
-      <span>Icon buttons</span>
-    </footer>
-  </article>
-  `
+  const $avatar = $("<img>")
+    .attr("src", tweetObject.user.avatars)
+    .attr("alt", "User Avatar")
+  const $name = $("<span>").text(tweetObject.user.name)
+  const $avatarName = $("<div>").append($avatar, $name)
+  const $handle = $("<span>").text(tweetObject.user.handle)
+  const $header = $("<header>").append($avatarName, $handle)
+  const $content = $("<p>").text(tweetObject.content.text)
+  const $main = $("<main>").append($content)
+  const $timeCreated = $("<span>").text(tweetObject.created_at)
+  const $iconLinks = $("<span>").text("Icon Links")
+  const $footer = $("<footer>").append($timeCreated, $iconLinks)
+  const $article = $("<article>").append($header, $main, $footer)
+    .addClass("tweet")
+
+  return $article
 };
 
-const renderTweets = tweetsArray => {
-  let tweets = ""
+const renderTweets = (tweetsArray, $container) => {
   for (let tweet of tweetsArray) {
-    tweets += createTweetElement(tweet)
+    $($container).append(createTweetElement(tweet))
   }
-  return $(".container").append(tweets)
 }
 
 $(document).ready(() => {
-  renderTweets(tweetsArray)
+  const $container = $(".container")
+  renderTweets(tweetsArray, $container) // Dependency Injection
 });
