@@ -33,7 +33,6 @@ nav > * {
 }
 
 
-
 /* Arrow animation */
 .arrow
 {
@@ -42,7 +41,6 @@ nav > * {
   display: inline-block;
   width: 25px;
   height: 25px;
-  
   background-color: #4056A1;
   background-image: url("../images/redarrow.png");
   background-size: contain;

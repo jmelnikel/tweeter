@@ -11,6 +11,9 @@ form textarea {
   outline: none;
   font-weight: 700;
   color: #545149;
+}
+
+form textarea::placeholder { 
   opacity: 0.5;
 }
 
