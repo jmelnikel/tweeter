@@ -39,11 +39,13 @@ nav > * {
   position: relative;
   bottom: -1.2rem;
   display: inline-block;
-  width: 25px;
-  height: 25px;
-  background-color: #4056A1;
-  background-image: url("../images/redarrow.png");
-  background-size: contain;
+  font-size: 1.5rem;
+  color: red;
+  /* width: 25px; */
+  /* height: 25px; */
+  /* background-color: #4056A1; */
+  /* background-image: url("../images/redarrow.png"); */
+  /* background-size: contain; */
 }
 
 .bounce {
