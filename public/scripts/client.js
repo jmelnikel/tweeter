@@ -1,28 +1,3 @@
-const tweetsArray = [
-  {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png",
-      "handle": "@SirIsaac"
-    },
-    "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-    "created_at": 1606595383057
-  },
-  {
-    "user": {
-      "name": "Descartes",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd"
-    },
-    "content": {
-      "text": "Je pense , donc je suis"
-    },
-    "created_at": 1606681783057
-  }
-];
-
 const createTweetElement = tweetObject => {
   const $avatar = $("<img>")
     .attr("src", tweetObject.user.avatars)
@@ -49,6 +24,32 @@ const renderTweets = (tweetsArray, $container) => {
 }
 
 $(document).ready(() => {
-  const $container = $(".tweets-list")
-  renderTweets(tweetsArray, $container) // Dependency Injection
+  document.getElementById("too-long-message").hidden = true;
+  document.getElementById("no-tweet-message").hidden = true;
+
+  $("#form").submit(event => {
+    event.preventDefault();
+    const $tweetText = $("#tweet-text").val();
+    const $serialized = $("#form").serialize();
+    if (!$tweetText) {
+      $("#no-tweet-message").slideDown();
+    } else if ($tweetText.length > 20) {
+      $("#too-long-message").slideDown();
+    } else {
+      $("#no-tweet-message").slideUp();
+      $("#too-long-message").slideUp();
+      $.post("/tweets", $serialized)
+      loadTweets()
+      $("#tweet-text").val(""); //Double check char couter is resetting
+    }
+  })
+
+  const loadTweets = () => {
+    const $container = $("#tweets-list")
+    // $container.empty();
+    $.get("/tweets", (tweetsArray) => {
+      renderTweets(tweetsArray, $container) // Dependency Injection
+    })
+  }
+  loadTweets()
 });

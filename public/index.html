@@ -28,6 +28,11 @@
 <body>
   <nav>
     <span>tweeter</span>
+    <label id="compose-tweet">
+      <button type="button">Compose Tweet
+      </button>
+      <div class="arrow bounce"></div>
+    </label>
   </nav>
   <header class="avatar">
     <img src="/images/profile-hex.png">
@@ -36,11 +41,13 @@
   <main class="container">
     <section class="new-tweet">
       <h2>Compose Tweet</h2>
-      <form action="/tweets" method="POST">
+      <h3 class="error-message" id="no-tweet-message">Please enter a tweet!</h3>
+      <h3 class="error-message" id="too-long-message">Your tweet is too long!</h3>
+      <form id="form" action="/tweets" method="POST">
         <label for="tweet-text"></label>
         <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
         <footer>
-          <button type="submit">Tweet</button>
+          <button id="button" type="submit">Tweet</button>
           <output name="counter" class="counter" for="tweet-text"></output>
         </footer>
       </form>
