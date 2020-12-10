@@ -1,14 +1,29 @@
 .avatar {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  height: 400px;
-  width: 100%;
-  background-color: #d89820;
-  background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+  display: none;
 }
 
-.avatar span {
-  font-weight: 300;
+
+@media screen and (min-width: 500px) {
+  .avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 400px;
+    width: 100%;
+    background-color: #d89820;
+    background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+  }
+
+  .avatar span {
+    font-weight: 300;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .avatar {
+    width: 40vw;
+    margin: 5vh 0;
+
+  }
 }

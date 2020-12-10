@@ -1,5 +1,10 @@
-.new-tweet h2 {
-  margin-bottom: 10px;
+#new-tweet {
+  margin-bottom: 5vh;
+}
+
+#new-tweet h2 {
+  font-size: 1.5rem;
+  margin: 0;
 }
 
 form textarea {
@@ -28,6 +33,7 @@ form footer {
 form button {
   background-color: #4056A1;
   color: white;
+  outline: none;
 }
 
 .limit-alert {
@@ -40,4 +46,11 @@ form button {
   color: red;
   border: 2px dashed red;
   text-align: center;
+}
+
+
+@media screen and (min-width: 500px) {
+  #new-tweet h2 {
+    font-size: inherit;
+  }
 }

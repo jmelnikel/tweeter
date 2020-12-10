@@ -36,29 +36,32 @@
       </div>
     </label>
   </nav>
-  <header class="avatar">
-    <img src="/images/profile-hex.png">
-    <h2>Amy <Span>Mansell</Span></h2>
-  </header>
-  <main class="container">
-    <section id="new-tweet" class="new-tweet">
-      <h2>Compose Tweet</h2>
-      <h3 class="error-message" id="no-tweet-message">Please enter a tweet!</h3>
-      <h3 class="error-message" id="too-long-message">Your tweet is too long!</h3>
-      <form id="form" action="/tweets" method="POST">
-        <label for="tweet-text"></label>
-        <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
-        <footer>
-          <button id="button" type="submit">Tweet</button>
-          <output name="counter" class="counter" for="tweet-text"></output>
-        </footer>
-      </form>
-    </section>
-    <section id="tweets-list">
-    </section>
-    <button id="scroll-button" type="button"><i class="fas fa-angle-double-up"></i></button>
-  </main>
-  <footer class="footer"></footer>
+  <div id="content">
+    <header class="avatar">
+      <img src="/images/profile-hex.png">
+      <h2>Amy <Span>Mansell</Span></h2>
+    </header>
+    <main id="container">
+      <section id="new-tweet">
+        <h2>Compose Tweet</h2>
+        <h3 class="error-message" id="no-tweet-message">Please enter a tweet!</h3>
+        <h3 class="error-message" id="too-long-message">Your tweet is too long!</h3>
+        <form id="form" action="/tweets" method="POST">
+          <label for="tweet-text"></label>
+          <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
+          <footer>
+            <button id="button" type="submit">Tweet</button>
+            <output name="counter" class="counter" for="tweet-text"></output>
+          </footer>
+        </form>
+      </section>
+      <section id="tweets-list">
+      </section>
+      <button id="scroll-button" type="button"><i class="fas fa-angle-double-up"></i></button>
+    </main>
+  </div>
+  <footer class="footer">
+  </footer>
 </body>
 
 </html>
