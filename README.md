@@ -10,7 +10,7 @@ Please note this app is a project assignment from Lighthouse Labs for The Web De
 ## App Highlights
 - Users can view and create content.
 - Users can view the app on various devices as the app has a responsive design.
-- The app has various components to add to the user experience from sliding components, to bouncing animations.
+- The app has various components to add to the user experience from sliding sections to bouncing animations.
 - The app notifies the user of their content length and warns the user if it is too long.
 
 ---
@@ -25,7 +25,7 @@ Please note this app is a project assignment from Lighthouse Labs for The Web De
 ## Getting Started
 - Install all dependencies (using the `npm install` command).
 - Run the development web server using the `node server/index.js` command.
-- Open your preferred browser and go to "localhost:8080".
+- Open your preferred browser and go to `localhost:8080`.
 
 ---
 ## Screen Shots
