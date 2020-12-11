@@ -10,9 +10,9 @@ $(document).ready(() => {
     const $header = $("<header>").append($avatarName, $handle);
     const $content = $("<p>").text(tweetObject.content.text);
     const $main = $("<main>").append($content);
-    const $timeCreated = $("<span>").text(tweetObject.created_at);
-    const $iconLinks = $("<span>").text("Icon Links");
-    const $footer = $("<footer>").append($timeCreated, $iconLinks);
+    const $timeCreated = $("<span>").text(new Date(tweetObject.created_at).toLocaleString());
+    // const $iconLinks = $("<span>").text("Icon Links");
+    const $footer = $("<footer>").append($timeCreated);
     const $article = $("<article>").append($header, $main, $footer)
       .addClass("tweet");
 
