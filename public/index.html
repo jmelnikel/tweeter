@@ -18,10 +18,6 @@
   <link rel="stylesheet" type="text/css" href="/styles/new-tweet.css">
   <link rel="stylesheet" type="text/css" href="/styles/tweet.css">
 
-  <script src="https://kit.fontawesome.com/5be636b391.js" crossorigin="anonymous"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script type="text/javascript" src="/scripts/client.js"></script>
-  <script type="text/javascript" src="/scripts/char-counter.js"></script>
 
   <title>Tweeter - Home Page</title>
 </head>
@@ -44,7 +40,7 @@
     <main id="container">
       <section id="new-tweet">
         <h2>Compose Tweet</h2>
-        <h3 class="error-message" id="no-tweet-message">Please enter a tweet!</h3>
+        <h3 class="error-message" id="no-text-message">Please enter a tweet!</h3>
         <h3 class="error-message" id="too-long-message">Your tweet is too long!</h3>
         <form id="form" action="/tweets" method="POST">
           <label for="tweet-text"></label>
@@ -62,6 +58,13 @@
   </div>
   <footer class="footer">
   </footer>
+
+  <script src="https://kit.fontawesome.com/5be636b391.js" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script type="text/javascript" src="/scripts/client.js"></script>
+  <script type="text/javascript" src="/scripts/char-counter.js"></script>
+  <script type="text/javascript" src="/scripts/scroll-button.js"></script>
+  <script type="text/javascript" src="/scripts/new-tweet.js"></script>
 </body>
 
 </html>
