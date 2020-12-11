@@ -1,5 +1,5 @@
 $(document).ready(() => {
-  const maxCount = 20;
+  const maxCount = 140;
   $(".counter").text(`${maxCount}`);
 
   $("#tweet-text").keyup(event => {

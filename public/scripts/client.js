@@ -1,5 +1,5 @@
 $(document).ready(() => {
-  const createTweetElement = tweetObject => {
+  const $createTweetElement = tweetObject => {
     const $avatar = $("<img>")
       .attr("src", tweetObject.user.avatars)
       .attr("alt", "User Avatar")
@@ -18,36 +18,38 @@ $(document).ready(() => {
     return $article
   };
 
-  const renderTweets = (tweetsArray, $container) => {
+  const $renderTweets = (tweetsArray, $container) => {
     for (let tweet of tweetsArray) {
-      $($container).prepend(createTweetElement(tweet))
+      $($container).prepend($createTweetElement(tweet))
     }
   }
 
-  const loadTweets = () => {
+  const $loadTweets = () => {
     const $container = $("#tweets-list")
     $container.empty();
     $.get("/tweets", (tweetsArray) => {
-      renderTweets(tweetsArray, $container) // Dependency Injection
+      $renderTweets(tweetsArray, $container) // Dependency Injection
     })
   }
 
   $("#form").submit(event => {
     event.preventDefault();
+    event.stopPropagation();
     const $tweetText = $("#tweet-text").val();
     const $serialized = $("#form").serialize();
     if (!$tweetText) {
       $("#no-text-message").slideDown();
-    } else if ($tweetText.length > 20) {
+    } else if ($tweetText.length > 140) {
       $("#too-long-message").slideDown();
     } else {
+      $.post("/tweets", $serialized)
       $("#no-text-message").slideUp();
       $("#too-long-message").slideUp();
-      $.post("/tweets", $serialized)
-      loadTweets()
-      $("#tweet-text").val(""); //Double check char counter is resetting
+      $("#tweet-text").val("");
+      $(".counter").text("140")
+      $loadTweets()
     }
   })
 
-  loadTweets()
+  $loadTweets()
 });
