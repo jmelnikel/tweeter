@@ -29,5 +29,6 @@ Please note this app is a project assignment from Lighthouse Labs for The Web De
 
 ---
 ## Screen Shots
-!["Screenshot of Login page"](https://github.com/jmelnikel/tinyApp/blob/master/docs/login-page.png?raw=true)
-!["Screenshot of URLs page"](https://github.com/jmelnikel/tinyApp/blob/master/docs/URLs%20page.png?raw=true)
+!["Large Device 1"](https://github.com/jmelnikel/tweeter/blob/master/docs/Screen%20Shot%202020-12-11%20at%202.40.58%20PM.png?raw=true)
+!["Large Device 2"](https://github.com/jmelnikel/tweeter/blob/master/docs/Screen%20Shot%202020-12-11%20at%202.41.21%20PM.png?raw=true)
+!["Small Device"](https://github.com/jmelnikel/tweeter/blob/master/docs/Screen%20Shot%202020-12-11%20at%202.41.58%20PM.png?raw=true)
