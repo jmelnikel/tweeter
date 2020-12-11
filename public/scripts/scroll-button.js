@@ -1,3 +1,4 @@
+/* eslint no-undef: "off" */
 $(document).ready(() => {
   document.getElementById("scroll-button").hidden = true;
 

@@ -1,3 +1,4 @@
+/* eslint no-undef: "off" */
 $(document).ready(() => {
   document.getElementById("too-long-message").hidden = true;
   document.getElementById("no-text-message").hidden = true;
@@ -7,6 +8,6 @@ $(document).ready(() => {
     event.preventDefault();
     $("#new-tweet").slideToggle();
     $("#tweet-text").focus();
-  })
-})
+  });
+});
 

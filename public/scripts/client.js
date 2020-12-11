@@ -1,36 +1,37 @@
+/* eslint no-undef: "off" */
 $(document).ready(() => {
   const $createTweetElement = tweetObject => {
     const $avatar = $("<img>")
       .attr("src", tweetObject.user.avatars)
-      .attr("alt", "User Avatar")
-    const $name = $("<span>").text(tweetObject.user.name)
-    const $avatarName = $("<div>").append($avatar, $name)
-    const $handle = $("<span>").text(tweetObject.user.handle)
-    const $header = $("<header>").append($avatarName, $handle)
-    const $content = $("<p>").text(tweetObject.content.text)
-    const $main = $("<main>").append($content)
-    const $timeCreated = $("<span>").text(tweetObject.created_at)
-    const $iconLinks = $("<span>").text("Icon Links")
-    const $footer = $("<footer>").append($timeCreated, $iconLinks)
+      .attr("alt", "User Avatar");
+    const $name = $("<span>").text(tweetObject.user.name);
+    const $avatarName = $("<div>").append($avatar, $name);
+    const $handle = $("<span>").text(tweetObject.user.handle);
+    const $header = $("<header>").append($avatarName, $handle);
+    const $content = $("<p>").text(tweetObject.content.text);
+    const $main = $("<main>").append($content);
+    const $timeCreated = $("<span>").text(tweetObject.created_at);
+    const $iconLinks = $("<span>").text("Icon Links");
+    const $footer = $("<footer>").append($timeCreated, $iconLinks);
     const $article = $("<article>").append($header, $main, $footer)
-      .addClass("tweet")
+      .addClass("tweet");
 
-    return $article
+    return $article;
   };
 
   const $renderTweets = (tweetsArray, $container) => {
-    for (let tweet of tweetsArray) {
-      $($container).prepend($createTweetElement(tweet))
+    for (const tweet of tweetsArray) {
+      $($container).prepend($createTweetElement(tweet));
     }
-  }
+  };
 
   const $loadTweets = () => {
-    const $container = $("#tweets-list")
+    const $container = $("#tweets-list");
     $container.empty();
     $.get("/tweets", (tweetsArray) => {
-      $renderTweets(tweetsArray, $container) // Dependency Injection
-    })
-  }
+      $renderTweets(tweetsArray, $container); // Dependency Injection
+    });
+  };
 
   $("#form").submit(event => {
     event.preventDefault();
@@ -42,14 +43,14 @@ $(document).ready(() => {
     } else if ($tweetText.length > 140) {
       $("#too-long-message").slideDown();
     } else {
-      $.post("/tweets", $serialized)
+      $.post("/tweets", $serialized);
       $("#no-text-message").slideUp();
       $("#too-long-message").slideUp();
       $("#tweet-text").val("");
-      $(".counter").text("140")
-      $loadTweets()
+      $(".counter").text("140");
+      $loadTweets();
     }
-  })
+  });
 
-  $loadTweets()
+  $loadTweets();
 });
