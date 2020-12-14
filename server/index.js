@@ -3,7 +3,10 @@
 
 // Basic express setup:
 
-const PORT = 8080;
+let PORT = process.env.PORT;
+if (PORT == null || PORT == "") {
+  PORT = 8000;
+}
 const express = require("express");
 const bodyParser = require("body-parser");
 const app = express();
