@@ -3,7 +3,7 @@ Tweeter is a SPA inspired by Twitter. This app is a full stack web application u
 - Front-end: HTML, CSS, JS, jQuery and AJAX
 - Server: Node, Express
 
-Please note this app is a project assignment from Lighthouse Labs for The Web Developer Bootcamp. Only the server code and database "dummy" data were given as this was a project for client-side development. 
+Please note this app is a project assignment from Lighthouse Labs for The Web Developer Bootcamp. Only the server code and database "dummy" data were given as this was a project for client-side development. All CSS, JS, jQuery, and AJAX coding was performed by the developer.
 
 ---
 ## App Highlights
